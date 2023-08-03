@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+require("dotenv").config();
 
-const mongoURI = "<enter your mongoDB uri here>";
+const mongoURI = process.env.MONGO_URI;
 
 const mongoDB = async () => {
   try {
