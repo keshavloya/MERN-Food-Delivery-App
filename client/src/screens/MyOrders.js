@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import baseUrl from "../baseUrl";
 
 const MyOrders = () => {
   const [ordersData, setOrdersData] = useState({});
   const [loading, setLoading] = useState(true);
+  const baseUrl = process.env.REACT_APP_BASE_URL;
 
   const fetchMyOrder = async () => {
     const response = await fetch(`${baseUrl}/api/getOrderData`, {

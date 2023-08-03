@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
-import baseUrl from "../baseUrl";
 
 const Home = () => {
   const [foodItems, setFooditems] = useState([]);
   const [foodCat, setFoodCat] = useState([]);
   const [search, setSearch] = useState("");
+  const baseUrl = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     const loadData = async () => {

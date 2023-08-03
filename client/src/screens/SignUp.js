@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import baseUrl from "../baseUrl";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -8,6 +7,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [location, setLocation] = useState("");
   const navigate = useNavigate();
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const canSave = Boolean(name) && Boolean(password) && Boolean(email);
 
   const handleSubmit = async (e) => {

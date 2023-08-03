@@ -4,10 +4,10 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove, drop } from "../features/cart";
-import baseUrl from "../baseUrl";
 library.add(faTrashCan);
 
 const Cart = () => {
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const data = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
