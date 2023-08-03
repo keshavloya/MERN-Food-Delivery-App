@@ -4,6 +4,7 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove, drop } from "../features/cart";
+import baseUrl from "../baseUrl";
 library.add(faTrashCan);
 
 const Cart = () => {
@@ -23,7 +24,7 @@ const Cart = () => {
   const handleCheckout = async () => {
     const userEmail = localStorage.getItem("userEmail");
     console.log();
-    const response = await fetch("http://localhost:5000/api/orderData", {
+    const response = await fetch(`${baseUrl}/api/orderData`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

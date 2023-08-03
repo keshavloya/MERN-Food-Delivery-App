@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
+import baseUrl from "../baseUrl";
 
 const Home = () => {
   const [foodItems, setFooditems] = useState([]);
@@ -8,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      const response = await fetch("http://localhost:5000/api/foodData", {
+      const response = await fetch(`${baseUrl}/api/foodData`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
