@@ -22,6 +22,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     fetchMyOrder();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //   return <div>Hello World</div>;

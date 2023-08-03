@@ -21,6 +21,7 @@ const Home = () => {
       setFoodCat(data[1]);
     };
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
